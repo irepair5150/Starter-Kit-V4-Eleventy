@@ -4,7 +4,7 @@ backend:
 
 local_backend: true
 
-logo_url: https://d33wubrfki0l68.cloudfront.net/c89899bad974606ce0e0f5d5a95842dc787dcb56/7fe98/assets/images/logo-blue.png
+logo_url: src/assets/images/12877358034423930450.png
 
 media_folder: "src/assets/images"
 public_folder: "/assets/images"
@@ -45,4 +45,5 @@ collections:
           - { name: "address", label: "Address", widget: "text", required: false }
           - { name: "hours", label: "Hours", widget: "text", required: false }
           - { name: "cta", label: "Primary CTA Text", widget: "string", required: false }
+
 
