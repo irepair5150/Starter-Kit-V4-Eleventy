@@ -1,14 +1,12 @@
 ---
 title: Home
 layout: page
+permalink: /
 eleventyNavigation:
   key: Home
   order: 1
 ---
 
-Welcome to iRepair Buffalo.
-We fix Apple devices and recover data.
-This site is under construction!
+Welcome to iRepair Buffalo. We fix Apple devices and recover data. This site is under construction!
 
-
-[Start a repair](/intake)
+[Start a repair](/start)
