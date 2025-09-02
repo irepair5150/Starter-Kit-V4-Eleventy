@@ -1,0 +1,28 @@
+/* src/css/irepair.css */
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #fefefe;
+  color: #222;
+  margin: 2rem;
+  line-height: 1.6;
+}
+
+header nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #777;
+  text-align: center;
+}
