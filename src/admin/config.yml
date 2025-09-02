@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: main
 
 local_backend: true
 
@@ -45,3 +45,4 @@ collections:
           - { name: "address", label: "Address", widget: "text", required: false }
           - { name: "hours", label: "Hours", widget: "text", required: false }
           - { name: "cta", label: "Primary CTA Text", widget: "string", required: false }
+
