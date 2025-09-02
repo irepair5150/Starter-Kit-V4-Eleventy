@@ -1,1 +1,9 @@
-
+{
+  "name": "iRepair",
+  "tagline": "Local Apple repair & data recovery",
+  "phone": "(716) 555‑1234",
+  "email": "hello@example.com",
+  "address": "123 Main St, Amherst, NY",
+  "hours": "By appointment",
+  "cta": "Start a repair"
+}
