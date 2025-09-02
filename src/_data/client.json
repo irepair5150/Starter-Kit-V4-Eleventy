@@ -1,15 +1,13 @@
 {
-  "name": "Oak Harbor Web Designs",
-  "email": "hello@oakharbor.com",
-  "phone": "555-779-4407",
-  "phoneFormatted": "(555) 779-4407",
+  "name": "iRepair Buffalo",
+  "phone": "716-276-3219",
+  "phoneFormatted": "(716) 276-3219",
   "address": {
-    "lineOne": "First Address Line",
-    "lineTwo": "Second Address Line, If Needed",
-    "city": "Denver",
-    "county": "CO",
-    "postcode": "80206",
+    "lineOne": "4140 Sheridan Drive, Suite 2",
+    "city": "Williamsville",
+    "county": "New York",
+    "postcode": "14221",
     "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
   },
-  "domain": "www.website.com"
+  "domain": "www.irepair-buffalo.com"
 }
