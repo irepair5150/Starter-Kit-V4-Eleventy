@@ -25,7 +25,9 @@ body {
 .top-bar .container {
   display: flex;
   justify-content: center;
-  align
+  align-items: center;
+}
+
 
 /* ===== HEADER ===== */
 .site-header {
