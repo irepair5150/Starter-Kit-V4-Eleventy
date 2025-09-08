@@ -6,19 +6,13 @@ media_folder: "src/assets/images"
 public_folder: "/assets/images"
 
 collections:
-  # General pages — can create new ones, editable slug
   - name: "pages"
     label: "Pages"
     folder: "src/pages"
     create: true
     slug: "{{slug}}"
-    filter:
-      field: "title"
-      value: "Home"
-      exclude: true   # hides the homepage from this list
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Slug", name: "slug", widget: "string", required: false, hint: "URL path for this page (leave blank for homepage)" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-
+      - { label: "Permalink", name: "permalink", widget: "hidden", default: "/" }
