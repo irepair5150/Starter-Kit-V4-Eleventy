@@ -6,19 +6,6 @@ media_folder: "src/assets/images"
 public_folder: "/assets/images"
 
 collections:
-  # Homepage — fixed permalink, always uses page layout
-  - name: "home"
-    label: "Homepage"
-    files:
-      - file: "src/pages/index.md"
-        label: "Homepage"
-        name: "home"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Body", name: "body", widget: "markdown" }
-          - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-          - { label: "Permalink", name: "permalink", widget: "hidden", default: "/" }
-
   # General pages — can create new ones, editable slug
   - name: "pages"
     label: "Pages"
@@ -34,3 +21,4 @@ collections:
       - { label: "Slug", name: "slug", widget: "string", required: false, hint: "URL path for this page (leave blank for homepage)" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+
