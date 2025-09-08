@@ -14,5 +14,5 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Permalink", name: "permalink", widget: "string", default: "/" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-      - { label: "Permalink", name: "permalink", widget: "hidden", default: "/" }
