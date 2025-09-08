@@ -12,6 +12,22 @@ body {
   padding: 0 1rem;
 }
 
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1; /* pushes footer down */
+}
+
+
 .top-bar {
   background: #ff006e;   /* or #ff00ff for pure magenta */
   color: #fff;           /* white text */
@@ -26,20 +42,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.site-content {
-  flex: 1; /* pushes footer down */
 }
 
 
