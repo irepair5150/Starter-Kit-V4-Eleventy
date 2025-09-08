@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>{{ title }} | iRepair Buffalo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/css/irepair.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title }} | iRepair Buffalo</title>
+  <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo"><a href="/">iRepair Buffalo</a></h1>
+      <nav class="site-nav">
         <a href="/">Home</a>
-        <a href="/start">Start a Repair</a>
-        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/contact">Contact</a>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      {{ content | safe }}
-    </main>
+  <main class="site-content container">
+    {{ content | safe }}
+  </main>
 
-    <footer>
-      <p>&copy; {{ now | date("yyyy") }} iRepair Buffalo</p>
-    </footer>
-  </body>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; {{ "now" | date("yyyy") }} iRepair Buffalo — Apple Device Repair & Data Recovery</p>
+    </div>
+  </footer>
+</body>
 </html>
