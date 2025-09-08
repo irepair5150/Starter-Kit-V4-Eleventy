@@ -63,6 +63,54 @@ body {
   color: #fff;
 }
 
+/* Position dropdown containers */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hide dropdown content by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+/* Style dropdown links */
+.dropdown-content a {
+  color: #333;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Keep nav links aligned */
+.site-nav > a,
+.site-nav > .dropdown > a,
+.site-nav > .dropdown > span {
+  color: #ddd;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.site-nav > a:hover,
+.site-nav > .dropdown > a:hover,
+.site-nav > .dropdown > span:hover {
+  color: #fff;
+}
+
 .site-content {
   padding: 2rem 0;
   background: #fff;
