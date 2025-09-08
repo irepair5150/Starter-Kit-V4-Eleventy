@@ -7,6 +7,3 @@ eleventyNavigation:
   order: 1
 ---
 We fix Apple devices and recover data. This site is under construction!
-
-[Start a repair](/start)
-
