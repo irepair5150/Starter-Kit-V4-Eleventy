@@ -1,7 +1,9 @@
 ---
-title: CONTACT IREPAIR BUFFALO
+title: CONTACT
 layout: page
 ---
+# CONTACT IREPAIR BUFFALO
+
 Located at 4140 Sheridan Drive in Williamsville, iRepair Buffalo is your convenient local repair shop for iPads, iPhones, and MacBooks.<br>
 <i>[For inquiries about data recovery, please use the form on the data recovery page.](/data-recovery)</i>
 ### CALL OR TEXT (716) 276-3219
