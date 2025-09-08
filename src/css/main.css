@@ -1,71 +1,181 @@
-/* ===== RESPONSIVE LAYOUT ===== */
-
-/* Make all images scale down on small screens */
-img {
-  max-width: 100%;
-  height: auto;
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  background: #e6f2ff;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Breakpoint: tablets and smaller */
-@media (max-width: 768px) {
-
-  /* Header: stack logo and nav vertically */
-  .header-flex {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  /* Navigation: stack links vertically */
-  .site-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
-  }
-
-  .site-nav > a,
-  .site-nav > .dropdown > a,
-  .site-nav > .dropdown > span {
-    padding: 0.75rem 1rem;
-    display: block;
-  }
-
-  /* Dropdown menus: position relative so they don't overflow off-screen */
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-    min-width: unset;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block; /* always show on tap */
-  }
-
-  /* Footer: stack columns */
-  .footer-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-right {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-/* Breakpoint: very small phones */
-@media (max-width: 480px) {
-  body {
-    font-size: 0.95rem;
-  }
 
-  .logo img {
-    height: 64px; /* shrink logo */
-  }
+html, body {
+  height: 100%;
+  margin: 0;
+}
 
-  .site-nav > a,
-  .site-nav > .dropdown > a,
-  .site-nav > .dropdown > span {
-    padding: 0.5rem;
-  }
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1; /* pushes footer down */
+}
+
+
+.top-bar {
+  background: #ff006e;   /* or #ff00ff for pure magenta */
+  color: #fff;           /* white text */
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+  position: sticky;      /* stick within its parent */
+  top: 0;                /* position at the very top */
+  z-index: 1000;         /* keep it above other elements */
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* ===== HEADER ===== */
+.site-header {
+  background: #d6e6ff; /* light blue */
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-left .logo {
+  display: inline-block;
+}
+
+.logo img {
+  height: 88px;
+  width: auto;
+  display: block;
+}
+
+/* ===== NAVIGATION ===== */
+.site-nav {
+  margin-top: 0.5rem;
+}
+
+/* Top-level nav links & dropdown triggers */
+.site-nav > a,
+.site-nav > .dropdown > a,
+.site-nav > .dropdown > span {
+  color: #000; /* black text */
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.site-nav > a:hover,
+.site-nav > .dropdown > a:hover,
+.site-nav > .dropdown > span:hover {
+  color: #333; /* dark gray hover */
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown menu */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f2f2f2;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===== MAIN CONTENT ===== */
+.site-content {
+  padding: 2rem 0;
+  background: #e6f2ff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+}
+
+form {
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background: #0056b3;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #003f80;
+}
+
+  
+/* ===== FOOTER ===== */
+.site-footer {
+  background: #ff006e;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-right {
+  font-size: 0.9rem;
+}
+
+.footer-right {
+  text-align: right;
 }
