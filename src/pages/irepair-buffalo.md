@@ -1,6 +1,7 @@
 ---
+layout: page
 title: iRepair Buffalo
 permalink: /
-layout: page
+slug: index
 ---
 Website under construction!
