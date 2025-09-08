@@ -6,16 +6,6 @@ media_folder: "src/assets/images"
 public_folder: "/assets/images"
 
 collections:
-  # Single homepage file
-  - name: "home"
-    label: "Homepage"
-    files:
-      - file: "src/pages/index.md"
-        label: "Homepage"
-        name: "home"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Intro Text", name: "body", widget: "markdown" }
   # Folder-based collection for new pages
   - name: "pages"
     label: "Pages"
@@ -26,4 +16,5 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+
 
