@@ -13,7 +13,7 @@ body {
 }
 
 .top-bar {
-  background: magenta;   /* or #ff00ff for pure magenta */
+  background: ff006e;   /* or #ff00ff for pure magenta */
   color: #fff;           /* white text */
   font-size: 0.9rem;
   padding: 0.4rem 0;
