@@ -10,10 +10,10 @@ collections:
     label: "Pages"
     folder: "src/pages"
     create: true
-    slug: "{{slug}}"   # auto-generate from title if slug field is empty
+    slug: "{{fields.filename | default slug}}"
     fields:
       - { label: "Layout", name: "layout", widget: "select", options: ["page", "landing", "post"], default: "page" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Permalink", name: "permalink", widget: "string", required: false, hint: "Optional: override full output URL (e.g. /about/)" }
-      - { label: "Filename/Slug", name: "slug", widget: "string", required: false, hint: "Optional: set the filename/URL segment (leave blank to auto-generate from title)" }
+      - { label: "Filename/Slug", name: "filename", widget: "string", required: false, hint: "Optional: set the filename/URL segment (leave blank to auto-generate from title)" }
       - { label: "Body", name: "body", widget: "markdown" }
