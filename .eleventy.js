@@ -47,6 +47,7 @@ async function imageShortcode(src, alt, className, loading, sizes = '(max-width:
         decoding="async">
     </picture>`;
 }
+eleventyConfig.setLibrary("md", markdownIt({ html: true }));
 
 module.exports = function (eleventyConfig) {
   // adds the navigation plugin for easy navs
