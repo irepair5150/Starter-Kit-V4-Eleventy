@@ -1,5 +1,5 @@
 ---
-title: CONTACT
+title: CONTACT IREPAIR BUFFALO
 layout: page
 slug: contact
 ---
