@@ -16,7 +16,6 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Intro Text", name: "body", widget: "markdown" }
-
   # Folder-based collection for new pages
   - name: "pages"
     label: "Pages"
@@ -27,3 +26,4 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+
