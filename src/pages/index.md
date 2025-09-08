@@ -1,5 +1,5 @@
 ---
-title: REPAIRS
+title: Home
 layout: page
 permalink: /
 eleventyNavigation:
