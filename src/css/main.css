@@ -12,6 +12,30 @@ body {
   padding: 0 1rem;
 }
 
+.header-flex {
+  display: flex;
+  justify-content: space-between; /* pushes left and right apart */
+  align-items: center;            /* vertical centering */
+  flex-wrap: wrap;                /* stack on small screens */
+}
+
+.header-left .logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-right a {
+  color: #ddd;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.header-right a:hover {
+  color: #fff;
+}
+
 .site-header {
   background: #111;
   color: #fff;
