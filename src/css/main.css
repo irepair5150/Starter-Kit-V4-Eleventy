@@ -59,14 +59,19 @@ body {
   margin-top: 0.5rem;
 }
 
-.site-nav a {
-  color: #ddd;
-  margin-right: 1rem;
+/* Top-level nav links and dropdown triggers */
+.site-nav > a,
+.site-nav > .dropdown > a,
+.site-nav > .dropdown > span {
+  color: #000; /* black */
+  padding: 0.5rem 1rem;
   text-decoration: none;
 }
 
-.site-nav a:hover {
-  color: #fff;
+.site-nav > a:hover,
+.site-nav > .dropdown > a:hover,
+.site-nav > .dropdown > span:hover {
+  color: #333; /* dark gray on hover */
 }
 
 /* Position dropdown containers */
