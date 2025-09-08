@@ -14,9 +14,10 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", hint: "URL path for this page" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
-      - { label: "Slug", name: "slug", widget: "string", hint: "URL path for this page" }
+
 
 
 
