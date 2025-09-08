@@ -49,6 +49,12 @@ body {
   font-weight: bold;
 }
 
+.logo img {
+  height: 50px;       /* adjust to fit your header height */
+  width: auto;        /* keep aspect ratio */
+  display: block;     /* remove inline gap */
+}
+
 .site-nav {
   margin-top: 0.5rem;
 }
