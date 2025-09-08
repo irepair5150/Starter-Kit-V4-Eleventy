@@ -1,10 +1,12 @@
 ---
 layout: page
 title: CONTACT
-slug: contact
 permalink: contact
+slug: contact
 filename: contact-irepair
 ---
+
+
 # CONTACT IREPAIR BUFFALO
 
 Located at 4140 Sheridan Drive in Williamsville, iRepair Buffalo is your convenient local repair shop for iPads, iPhones, and MacBooks.<br>
