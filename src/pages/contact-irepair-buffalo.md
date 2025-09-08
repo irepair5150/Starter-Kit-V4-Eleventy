@@ -1,7 +1,9 @@
 ---
-title: CONTACT IREPAIR BUFFALO
 layout: page
+title: CONTACT
 slug: contact
+permalink: contact
+filename: contact-irepair
 ---
 # CONTACT IREPAIR BUFFALO
 
