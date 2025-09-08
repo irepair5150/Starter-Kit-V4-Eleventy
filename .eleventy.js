@@ -1,8 +1,8 @@
-// imports for the various eleventy plugins (navigation & image)
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const { DateTime } = require('luxon');
 const Image = require('@11ty/eleventy-img');
 const path = require('path');
+const markdownIt = require('markdown-it'); 
 
 // allows the use of {% image... %} to create responsive, optimised images
 // CHANGE DEFAULT MEDIA QUERIES AND WIDTHS
@@ -47,36 +47,37 @@ async function imageShortcode(src, alt, className, loading, sizes = '(max-width:
         decoding="async">
     </picture>`;
 }
-eleventyConfig.setLibrary("md", markdownIt({ html: true }));
+module.exports = function(eleventyConfig) {
+  // allow raw HTML in Markdown
+  eleventyConfig.setLibrary("md", markdownIt({ html: true }));
 
-module.exports = function (eleventyConfig) {
-  // adds the navigation plugin for easy navs
+  // plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
-  // allows css, assets, robots.txt and CMS config files to be passed into /public
+  // passthroughs
   eleventyConfig.addPassthroughCopy('./src/css/**/*.css');
   eleventyConfig.addPassthroughCopy('./src/assets');
   eleventyConfig.addPassthroughCopy('./src/admin');
   eleventyConfig.addPassthroughCopy('./src/_redirects');
   eleventyConfig.addPassthroughCopy({ './src/robots.txt': '/robots.txt' });
 
-  // open on npm start and watch CSS files for changes - doesn't trigger 11ty rebuild
+  // browserSync
   eleventyConfig.setBrowserSyncConfig({
     open: true,
     files: './public/css/**/*.css',
   });
 
-  // allows the {% image %} shortcode to be used for optimised iamges (in webp if possible)
+
+  // shortcodes
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);
 
-  // normally, 11ty will render dates on blog posts in full JSDate format (Fri Dec 02 18:00:00 GMT-0600). That's ugly
-  // this filter allows dates to be converted into a normal, locale format. view the docs to learn more (https://moment.github.io/luxon/api-docs/index.html#datetime)
+  // filters
   eleventyConfig.addFilter('postDate', (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
-eleventyConfig.addFilter("date", (value, format = "LLL dd, yyyy") => {
-  return DateTime.fromJSDate(value).toFormat(format);
-});
+  eleventyConfig.addFilter("date", (value, format = "LLL dd, yyyy") => {
+    return DateTime.fromJSDate(value).toFormat(format);
+  });
 
   return {
     dir: {
@@ -85,7 +86,6 @@ eleventyConfig.addFilter("date", (value, format = "LLL dd, yyyy") => {
       layouts: "_layouts",
       output: 'public',
     },
-    // allows .html files to contain nunjucks templating language
     htmlTemplateEngine: 'njk',
   };
 };
