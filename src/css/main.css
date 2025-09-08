@@ -12,6 +12,29 @@ body {
   padding: 0 1rem;
 }
 
+.top-bar {
+  background: magenta;   /* or #ff00ff for pure magenta */
+  color: #fff;           /* white text */
+  font-size: 0.9rem;
+  padding: 0.4rem 0;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: center; /* center text horizontally */
+  align-items: center;
+}
+
+.top-bar a {
+  color: #fff; /* keep links white too */
+  text-decoration: underline;
+}
+
+.top-bar a:hover {
+  color: #ffccff; /* lighter magenta-pink on hover */
+}
+
+
 /* ===== HEADER ===== */
 .site-header {
   background: #d6e6ff; /* light blue */
