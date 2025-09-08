@@ -6,15 +6,16 @@ media_folder: "src/assets/images"
 public_folder: "/assets/images"
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: "home"
+    label: "Homepage"
     files:
       - file: "src/pages/index.md"
         label: "Homepage"
         name: "home"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Intro Text", name: "body", widget: "markdown", hint: "Main welcome text" }
+          - { label: "Intro Text", name: "body", widget: "markdown" }
+
 
   - name: "services"
     label: "Service Tiers"
@@ -33,3 +34,4 @@ collections:
     fields:
       - { label: "Referral Bonus Amount", name: "bonus", widget: "number" }
       - { label: "Max Payouts Per Customer", name: "max_payouts", widget: "number" }
+
