@@ -39,4 +39,4 @@ Located at 4140 Sheridan Drive in Williamsville, iRepair Buffalo is your conveni
   </p>
 </form>
 
-<form name="contact" method="POST" data-netlify="true" action="/thank-you">
+<form name="contact" method="POST" data-netlify="true" action="/thank-you"></form>
