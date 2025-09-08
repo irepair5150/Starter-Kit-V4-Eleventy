@@ -2,48 +2,34 @@ backend:
   name: git-gateway
   branch: main
 
-local_backend: true
-
-logo_url: src/assets/images/12877358034423930450.png
-
 media_folder: "src/assets/images"
 public_folder: "/assets/images"
 
 collections:
   - name: "pages"
     label: "Pages"
-    folder: "src/pages"
+    files:
+      - file: "src/pages/index.md"
+        label: "Homepage"
+        name: "home"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Intro Text", name: "body", widget: "markdown", hint: "Main welcome text" }
+
+  - name: "services"
+    label: "Service Tiers"
+    folder: "src/services"
     create: true
     slug: "{{slug}}"
     fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "layout", label: "Layout", widget: "hidden", default: "page" }
-      - { name: "body", label: "Content", widget: "markdown" }
+      - { label: "Service Name", name: "title", widget: "string" }
+      - { label: "Description", name: "body", widget: "markdown" }
+      - { label: "Price", name: "price", widget: "number", value_type: "float", hint: "In USD" }
+      - { label: "Active", name: "active", widget: "boolean", default: true }
 
-  - name: "intake"
-    label: "Intake Info"
-    files:
-      - file: "src/pages/intake.md"
-        label: "Intake Page"
-        name: "intake"
-        fields:
-          - { name: "title", label: "Title", widget: "string" }
-          - { name: "layout", label: "Layout", widget: "hidden", default: "page" }
-          - { name: "body", label: "Content", widget: "markdown" }
-
-  - name: "business"
-    label: "Business Info"
-    files:
-      - file: "src/_data/site.json"
-        label: "Site Settings"
-        name: "site"
-        fields:
-          - { name: "name", label: "Business Name", widget: "string" }
-          - { name: "tagline", label: "Tagline", widget: "string", required: false }
-          - { name: "phone", label: "Phone", widget: "string" }
-          - { name: "email", label: "Email", widget: "string" }
-          - { name: "address", label: "Address", widget: "text", required: false }
-          - { name: "hours", label: "Hours", widget: "text", required: false }
-          - { name: "cta", label: "Primary CTA Text", widget: "string", required: false }
-
-
+  - name: "referrals"
+    label: "Referral Logic"
+    file: "src/_data/referrals.json"
+    fields:
+      - { label: "Referral Bonus Amount", name: "bonus", widget: "number" }
+      - { label: "Max Payouts Per Customer", name: "max_payouts", widget: "number" }
