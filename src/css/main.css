@@ -17,23 +17,15 @@ body {
   color: #fff;           /* white text */
   font-size: 0.9rem;
   padding: 0.4rem 0;
+  position: sticky;      /* stick within its parent */
+  top: 0;                /* position at the very top */
+  z-index: 1000;         /* keep it above other elements */
 }
 
 .top-bar .container {
   display: flex;
-  justify-content: center; /* center text horizontally */
-  align-items: center;
-}
-
-.top-bar a {
-  color: #fff; /* keep links white too */
-  text-decoration: underline;
-}
-
-.top-bar a:hover {
-  color: #ffccff; /* lighter magenta-pink on hover */
-}
-
+  justify-content: center;
+  align
 
 /* ===== HEADER ===== */
 .site-header {
