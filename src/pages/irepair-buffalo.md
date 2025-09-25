@@ -4,4 +4,5 @@ title: iRepair Buffalo
 permalink: /
 slug: index
 ---
-Website under construction!
+Website is undergoing maintenance.\
+Please call the shop at 276-3219!
